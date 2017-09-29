@@ -8,9 +8,12 @@ import Repository from '../components/repository.vue'
 
 Vue.use(Router);
 
+if (window.localStorage.getItem('token')) {
+  store.commit(types.LOGIN,window.localStorage.getItem('token'));
+}
 
 
-export default new Router({
+const router =  new Router({
   routes: [
     {
       path: '/',
@@ -26,9 +29,31 @@ export default new Router({
     	}
     },
     {
-    	path:'/',
+    	path:'/login',
     	name:'login',
     	component:Login
     }
   ]
 })
+
+router.beforeEach((to,from,next) =>{
+  if (to.matched.some(r => r.meta.haveLogin)) {
+    if (store.state.token) {
+      next();
+    }
+    else{
+      next({
+        path:'/login',
+        query:{redirect: to.fullPath}
+      })
+    }
+  }
+  else
+  {
+    next();
+  }
+})
+
+
+
+export default router;
