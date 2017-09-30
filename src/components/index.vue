@@ -1,0 +1,27 @@
+<template>
+    <div>
+        <ul>
+            <router-link :to="{path:'/repository'}">
+              <md-button href="#/repository"  class="md-raised md-primary">
+                view your repositories
+              </md-button>
+            </router-link>
+        </ul>
+    </div>
+</template>
+
+<script type="application/ecmascript">
+    export default {
+        name: '',
+        data () {
+            return {
+                msg: ''
+            }
+        }
+    }
+</script>
+
+
+<style scoped lang='scss' rel="stylesheet/scss" type="text/css">
+
+</style>
