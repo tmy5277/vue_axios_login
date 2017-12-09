@@ -22,4 +22,4 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 
 -------  
-似乎是我使用git pull命令时哪里出错了，导致几个组件都是空白的，等教育实习闲下来补上
+<del>似乎是我使用git pull命令时哪里出错了，导致几个组件都是空白的，等教育实习闲下来补上</del>
