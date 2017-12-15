@@ -11,7 +11,7 @@
 </template>
 
 <script type="application/ecmascript">
-  import * as types from './store/types'
+  import * as types from './config/types'
   export default {
     data () {
       return {

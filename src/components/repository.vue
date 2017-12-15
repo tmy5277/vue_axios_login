@@ -41,8 +41,8 @@
 </template>
 
 <script type="application/ecmascript">
-    import api from './constant/api'
-    import * as types from './store/types'
+    import api from './config/api'
+    import * as types from './config/types'
 
     export default {
         data () {
@@ -61,7 +61,7 @@
                 let params = {
                     sort: 'updated'
                 }
-                this.axios.get(api.repo_list, params)
+                this.axios.get(api.repos, params)
                     .then(response => {
                         this.list = response.data;
                     })
