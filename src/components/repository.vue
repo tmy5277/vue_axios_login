@@ -47,13 +47,12 @@
     export default {
         data () {
             return {
-                msg: '',
                 list: []
             }
         },
         mounted(){
             this.$store.commit(types.TITLE, 'Your Repositories');
-            this.getRepository();
+            this.getRepository();//获取数据，渲染
         },
 
         methods: {

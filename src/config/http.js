@@ -4,7 +4,7 @@ import router from '../router/index.js'
 import * as types from './types.js'
 
 axios.defaults.timeout = 5000;
-axios.defaults.baseURI = 'https://api.github.com';
+axios.defaults.baseURI = 'https://api.github.com';//在这设置了默认url，所以其他地方的路径都是在这个路径的基础上的
 
 axios.interceptors.request.use(
 	request => {
